@@ -34,10 +34,7 @@ while onLoop:
                     includeLetter = False
                     break
                 case _:
-                    try:
-                        includeLetter = input('Invalid input. Please choose between (Y|N): ')
-                    except ValueError:
-                        print('Invalid input. Please enter a valid choice.')
+                    includeLetter = input('Invalid input. Please choose between (Y|N): ')
 
         print('=======================================================')
 
@@ -51,10 +48,7 @@ while onLoop:
                     includeDigit = False
                     break
                 case _:
-                    try:
-                        includeDigit = input('Invalid input. Please choose between (Y|N): ')
-                    except ValueError:
-                        print('Invalid input. Please enter a valid choice.')
+                    includeDigit = input('Invalid input. Please choose between (Y|N): ')
 
         print('=======================================================')
 
@@ -68,10 +62,7 @@ while onLoop:
                     includePunctuation = False
                     break
                 case _:
-                    try:
-                        includePunctuation = input('Invalid input. Please choose between (Y|N): ')
-                    except ValueError:
-                        print('Invalid input. Please enter a valid choice.')
+                    includePunctuation = input('Invalid input. Please choose between (Y|N): ')
 
         print('=======================================================')
 
