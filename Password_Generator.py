@@ -35,7 +35,7 @@ while onLoop:
                     break
                 case _:
                     try:
-                        includeLetter = input('Invalid input. Please choose between between (Y|N): ')
+                        includeLetter = input('Invalid input. Please choose between (Y|N): ')
                     except ValueError:
                         print('Invalid input. Please enter a valid choice.')
 
@@ -52,7 +52,7 @@ while onLoop:
                     break
                 case _:
                     try:
-                        includeDigit = input('Invalid input. Please choose between between (Y|N): ')
+                        includeDigit = input('Invalid input. Please choose between (Y|N): ')
                     except ValueError:
                         print('Invalid input. Please enter a valid choice.')
 
@@ -69,7 +69,7 @@ while onLoop:
                     break
                 case _:
                     try:
-                        includePunctuation = input('Invalid input. Please choose between between (Y|N): ')
+                        includePunctuation = input('Invalid input. Please choose between (Y|N): ')
                     except ValueError:
                         print('Invalid input. Please enter a valid choice.')
 
@@ -78,13 +78,11 @@ while onLoop:
         if(includeDigit or includeLetter or includePunctuation):
             if (includeDigit):
                 character_pool += string.digits
-                isInvalid = False 
             if (includeLetter):
                 character_pool += string.ascii_letters
-                isInvalid = False 
             if (includePunctuation):
                 character_pool += punctuation
-                isInvalid = False 
+            isInvalid = False 
         else:
             print('\tInvalid inputs. Put at least one "Y"')
             print('=======================================================')
@@ -114,4 +112,4 @@ while onLoop:
                 print('=======================================================')
                 break
             case _:
-                onLoop = input('Invalid input. Please choose between between (Y|N): ')
+                onLoop = input('Invalid input. Please choose between (Y|N): ')
