@@ -9,10 +9,13 @@ while onLoop:
     isInvalid = True
     character_pool = ''
     while True:
-        size = int(input('\tEnter password length (8 - 16): '))
-        if 8 <= size <= 16:
-            break
-        print('Invalid length. Please enter a value between 8 and 16.')
+        try:
+            size = int(input('\tEnter password length (8 - 16): '))
+            if 8 <= size <= 16:
+                break
+            print('Invalid length. Please enter a value between 8 and 16.')
+        except ValueError:
+            print('Invalid input. Please enter a numeric value.')
         
 
     print('=======================================================')
@@ -31,7 +34,10 @@ while onLoop:
                     includeLetter = False
                     break
                 case _:
-                    includeLetter = input('Invalid input. Please choose between between (Y|N): ')
+                    try:
+                        includeLetter = input('Invalid input. Please choose between between (Y|N): ')
+                    except ValueError:
+                        print('Invalid input. Please enter a valid choice.')
 
         print('=======================================================')
 
@@ -45,7 +51,10 @@ while onLoop:
                     includeDigit = False
                     break
                 case _:
-                    includeDigit = input('Invalid input. Please choose between between (Y|N): ')
+                    try:
+                        includeDigit = input('Invalid input. Please choose between between (Y|N): ')
+                    except ValueError:
+                        print('Invalid input. Please enter a valid choice.')
 
         print('=======================================================')
 
@@ -59,7 +68,10 @@ while onLoop:
                     includePunctuation = False
                     break
                 case _:
-                    includePunctuation = input('Invalid input. Please choose between between (Y|N): ')
+                    try:
+                        includePunctuation = input('Invalid input. Please choose between between (Y|N): ')
+                    except ValueError:
+                        print('Invalid input. Please enter a valid choice.')
 
         print('=======================================================')
 
